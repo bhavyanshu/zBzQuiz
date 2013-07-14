@@ -9,43 +9,19 @@ include('header.php');
 						<div class="grids">
 						<h2>Welcome to zBzQuiz Web App Interface</h2>
 																<div class="grid-6 grid grey">
-																	<h5>Teacher's Login</h5>
-																		<form name="hongkiat" id="hongkiat-form" method="post" action="#">
-																					<section id="aligned">
-																						<input type="text" name="username" id="username" placeholder="Your username" autocomplete="off" tabindex="1" class="txtinput">
-																						<input type="email" name="userpass" id="userpass" placeholder="Your password" autocomplete="off" tabindex="2" class="txtinput">
-																			<section>
-																			<section id="buttons">
-																						<input type="reset" name="reset" id="resetbtn" class="resetbtn" value="Reset">
-																						<input type="submit" name="submit" id="submitbtn" class="submitbtn" tabindex="7" value="Login!">
-																						
-																						<br style="clear:both;">
-																					</section>
-																		</form>
-																		<br>
-																		<a class="button" href="zbzapp/index.php">Sign Up!</a>
+																<h3>For Teachers</h3>
+																	<a class="button" href="teacher/tearegister.php">Sign up as Teacher!</a>
+																	<a class="button" href="teacher/index.php">Login as Teacher!</a>
 																</div>
 																<div class="grid-4 grid">
 																<p>&nbsp;</p>
 																</div>
-
+																
 
 																<div class="grid-6 grid green">
-																	<h5>Student's Login</h5>
-																	<form name="hongkiat" id="hongkiat-form" method="post" action="#">
-																					<section id="aligned">
-																							<input type="text" name="username" id="username" placeholder="Your username" autocomplete="off" tabindex="1" class="txtinput">
-																						<input type="email" name="userpass" id="userpass" placeholder="Your password" autocomplete="off" tabindex="2" class="txtinput">
-																			<section>
-																			<section id="buttons">
-																						<input type="reset" name="reset" id="resetbtn" class="resetbtn" value="Reset">
-																						<input type="submit" name="submit" id="submitbtn" class="submitbtn" tabindex="7" value="Login!">
-																						
-																						<br style="clear:both;">
-																					</section>
-																		</form>
-																		<br>
-																		<a class="button" href="zbzapp/index.php">Sign Up!</a>
+																<h3>For Students</h3>
+																	<a class="button" href="student/sturegister.php">Sign up as Student!</a>
+																	<a class="button" href="student/index.php">Login as Student!</a>
 																</div>
 
 

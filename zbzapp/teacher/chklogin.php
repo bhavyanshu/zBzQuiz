@@ -1,6 +1,6 @@
 <?php
 require_once('../config.php');
-include('password.php');
+include('password.php'); //including password.php for bcrypt hash generation.
 
 if(!empty($_POST['username']) && !empty($_POST['password']))
 {

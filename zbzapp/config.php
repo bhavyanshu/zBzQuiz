@@ -6,8 +6,7 @@ You only need to modify this file for your personal set up. Refer to README for 
 
 try
 	{
-		$dbinfo= new PDO('mysql:host=localhost;dbname=zbzapp_main','test_code','test_code');
-		//$dbinfo= new PDO('mysql:host=sql111.getfreehosting.co.uk;dbname=getfh_11451098_imgproject','getfh_11451098','guitarist92');		
+		$dbinfo= new PDO('mysql:host=localhost;dbname=zbzapp_main','test_code','test_code');	//Testing on localhost
 		session_start(); //Started session. No need to call this on other pages.
 		date_default_timezone_set('Asia/Calcutta'); //Set for IST. You may modify according to your needs.
 	}

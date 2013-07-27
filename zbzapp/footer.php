@@ -11,7 +11,7 @@
                                     <p>zBzQuiz Web Application v1.0 </p>
                                 </div>
                                <div class="grid-6 grid text-center">
-                                    <p><a href="http://codershangout.org/users/bhavyanshu" title="copyleft">Developed by Bhavyanshu Parasher</a></p>
+                                    <p><a href="" title="copyleft">Developed by Bhavyanshu Parasher</a></p>
                                 </div>
                                 
                                 <div class="grid-5 grid text-center">

@@ -19,7 +19,7 @@ include('header.php');
    
  if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['uname']))
 	{
-		echo "<h5>Account Status</h5>";
+		echo "<h3>Account Status</h3>";
 		  if($_SESSION['ulastlogintime']==NULL)
 		{
      echo "<p>Username: <i><strong>".$_SESSION['uname']."</strong></i><br> User Email: <i><strong>".$_SESSION['uemail']."</strong></i><br></p>";  

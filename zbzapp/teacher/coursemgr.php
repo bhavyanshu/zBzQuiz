@@ -30,20 +30,12 @@ include('header.php');
     	}    
 ?>
 <p><a class="button" href="chklogout.php">Log out!</a></p>
-</div>
-	<div class="grid-6 grid green">	
-	<h3>Quiz Manager</h3>
-	<p><a href="coursemgr.php">Manage Courses</a></p>
-	<p>View Results</p>		
-	</div>				
-		
+
 <?php   
 	}
  else
   	{
 		echo "<p><b>You are currently not logged in!</b></p>"; ?>
-	
-				<h5>Teacher's Login</h5>
 			<form name="hongkiat" id="hongkiat-form" method="post" action="chklogin.php">
 																					<section id="aligned">
 																				<p>		<input type="text" name="username" id="username" placeholder="Your username" autocomplete="off" tabindex="1" class="txtinput">
@@ -58,13 +50,19 @@ include('header.php');
 																		</form>
 																		
 																	<p>	<a class="button" href="tearegister.php">Sign Up!</a></p>
-	
 <?php
 	}
 ?>
 																
-
-								
+																</div>
+	<div class="grid-6 grid green">	
+	<h3>Course Manager</h3>
+	<br/>
+	<?php
+	$teachedID=$_SESSION['teacherid'];
+	?>
+	<br/>		
+	</div>												
 
 			</div><!--end of grids-->
 

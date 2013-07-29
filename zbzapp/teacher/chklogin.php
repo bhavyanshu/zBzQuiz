@@ -30,6 +30,7 @@ $sqlsethash= $dbinfo->prepare("SELECT * FROM teacher_login_zbzxt WHERE uname =?"
 				foreach($result as $row)
 				{
 		   $email = $row['uemail']; 
+		   $uid = $row['uid'];
 				$lastlogin = $row['ulogintime'];
 				$ustatus=1;
 				$ulogintime=date("d-m-Y H:i:s");   
@@ -39,6 +40,7 @@ $sqlsethash= $dbinfo->prepare("SELECT * FROM teacher_login_zbzxt WHERE uname =?"
 			$_SESSION['uname'] = $username;
 			$_SESSION['uemail'] = $email;
 			$_SESSION['ulastlogintime']=$lastlogin;
+			$_SESSION['teacherid']=$uid;
 			$_SESSION['LoggedIn'] = 1;
 			echo "<h1>Success</h1>";
 			echo "<p>Redirecting...please wait!</p>";

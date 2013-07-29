@@ -7,7 +7,7 @@ include('head.php');
 ?>
 <body>
 	<div class="wrapper">	
-                    <a href="index.html" id="logo"><img src="../img/logo.png" alt="something" />
+                    <a href="index.php" id="logo"><img src="../img/logo.png" alt="something" />
                       <h1 class="accessibility">zBzQuiz User Interface</h1></a>
                    
                    <!--These are just samples, use your own icons. If you use larger ones, make sure too change the css-file to fit them in.

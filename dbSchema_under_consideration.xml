@@ -37,7 +37,7 @@
 		<type label="SET" length="1" sql="SET" quote=""/>
 		<type label="Bit" length="0" sql="bit" quote=""/>
 	</group>
-</datatypes><table x="10" y="101" name="teacher_login_zbzxt">
+</datatypes><table x="26" y="114" name="teacher_login_zbzxt">
 <row name="uid" null="0" autoincrement="1">
 <datatype>INT</datatype>
 <default>NULL</default></row>
@@ -64,7 +64,7 @@
 </key>
 <comment>Login information for teacher</comment>
 </table>
-<table x="953" y="104" name="student_login_zbzxs">
+<table x="17" y="348" name="student_login_zbzxs">
 <row name="stuid" null="0" autoincrement="1">
 <datatype>INT</datatype>
 <default>NULL</default></row>
@@ -91,7 +91,7 @@
 </key>
 <comment>Login information for student.</comment>
 </table>
-<table x="82" y="321" name="teacher_course_status">
+<table x="220" y="94" name="teacher_course_status">
 <row name="courseid" null="0" autoincrement="1">
 <datatype>INT</datatype>
 <default>NULL</default></row>
@@ -106,7 +106,7 @@
 </key>
 <comment>Status information of course registered by teacher</comment>
 </table>
-<table x="155" y="450" name="course_test_status">
+<table x="429" y="71" name="course_test_status">
 <row name="testid" null="0" autoincrement="1">
 <datatype>INT</datatype>
 <default>NULL</default></row>
@@ -124,7 +124,7 @@
 </key>
 <comment>Test status information for registered course.</comment>
 </table>
-<table x="826" y="326" name="student_enroll_status">
+<table x="211" y="326" name="student_enroll_status">
 <row name="enrollid" null="1" autoincrement="1">
 <datatype>INT</datatype>
 <default>NULL</default></row>
@@ -142,7 +142,7 @@
 </key>
 <comment>has information related to student enrolled in what course</comment>
 </table>
-<table x="254" y="599" name="question_bank">
+<table x="613" y="48" name="question_bank">
 <row name="quesid" null="0" autoincrement="1">
 <datatype>INT</datatype>
 <default>NULL</default></row>
@@ -157,7 +157,7 @@
 </key>
 <comment>Contains information about questions referencing to other tables.</comment>
 </table>
-<table x="336" y="714" name="question_answer_choices">
+<table x="771" y="0" name="question_answer_choices">
 <row name="ansid" null="0" autoincrement="1">
 <datatype>INT</datatype>
 <default>NULL</default></row>
@@ -179,4 +179,3 @@
 <comment>Contains 4 choices for each question ID</comment>
 </table>
 </sql>
-

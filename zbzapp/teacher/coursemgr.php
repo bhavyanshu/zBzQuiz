@@ -59,11 +59,28 @@ include('header.php');
 	<h3>Course Manager</h3>
 	<br/>
 	<?php
-	$teachedID=$_SESSION['teacherid'];
+	$teacherID=$_SESSION['teacherid']; //uid in mysql DB.
 	?>
+	<?php 
+	$fetch_courses=$dbinfo->prepare("SELECT * FROM teacher_course_status where uid = ?");
+	$fetch_courses->execute(array($teacherID));
+	$result=$fetch_courses->fetchALL();
+	if($result)
+	{
+		echo "<p>Courses by you</p>";
+		}
+		else
+		{
+			echo "<h5>There are currently no courses registered by you.</h5>";
+			}
+	?>
+	
 	<br/>		
 	</div>												
-
+<div class="grid-6 grid grey">	
+	<p>Create New Course</p>	
+	<form name="hongkiat" id="hongkiat-form" method="post" action=""></form>
+	</div>
 			</div><!--end of grids-->
 
 		</div><!--end of wrapper-->

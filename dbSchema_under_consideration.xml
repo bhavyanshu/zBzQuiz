@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- SQL XML created by WWW SQL Designer, http://code.google.com/p/wwwsqldesigner/ -->
+<!-- Active URL: http://ondras.zarovi.cz/sql/demo/ -->
 <sql>
 <datatypes db="mysql">
 	<group label="Numeric" color="rgb(238,238,170)">
@@ -100,6 +101,9 @@
 <row name="coursename" null="0" autoincrement="0">
 <datatype>VARCHAR</datatype>
 <default>'NULL'</default></row>
+<row name="coursedesc" null="0" autoincrement="0">
+<datatype>VARCHAR(150)</datatype>
+<default>'NULL'</default></row>
 <key type="PRIMARY" name="">
 <part>courseid</part>
 </key>
@@ -178,3 +182,4 @@
 <comment>Contains 4 choices for each question ID</comment>
 </table>
 </sql>
+

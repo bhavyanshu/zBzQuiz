@@ -31,21 +31,19 @@ function getpageTitle($titleset){
             <script>window.jQuery || document.write('<script src="../scripts/jquery164min.js">\x3C/script>')</script><!--local fallback for JQuery-->
 								<script src="../js/jquery.flexslider-min.js" type="text/javascript"></script>
             <link rel="stylesheet" href="../css/flexslider.css" />
-            
             <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 								<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 								<script src="http://malsup.github.com/jquery.form.js"></script>
-            
             <script type="text/javascript">
-				  $(window).load(function() {
-					$('.flexslider').flexslider({
-						  animation: "slide",<!--you can also choose fade here-->
-						  directionNav: false,<!--Attention: if you choose true here, the nav-buttons will also appear in the ticker! -->
-						  keyboardNav: true,
-						  mousewheel: true
-					});
-				  });
-				</script>
+				  				$(window).load(function() {
+												$('.flexslider').flexslider({
+						  					animation: "slide",<!--you can also choose fade here-->
+						  					directionNav: false,<!--Attention: if you choose true here, the nav-buttons will also appear in the ticker! -->
+						  					keyboardNav: true,
+						  					mousewheel: true
+										});
+				  				});
+								</script>
                
                     <!--Hide the hr img because of ugly borders in IE7. You can change the color of border-top to display a line -->
                     <!--[if lte IE 7]>

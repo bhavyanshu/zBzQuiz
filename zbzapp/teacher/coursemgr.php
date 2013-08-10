@@ -7,7 +7,9 @@ include('header.php');
    $(document).ready(function() { 
    $("#displaycourseStats").load("fetchcourses.php"); // call as soon as page load
    $('.coursereg').ajaxForm(function() { 
-     $('#msg').val(''); // alert("Thank you for posting!"); 
+     $('#coursename1').val(''); 
+				$('#coursedesc1').val('');      
+     alert("Created course. Please scroll down to view."); 
      $("#displaycourseStats").load("fetchcourses.php")
   }); 
 });  
@@ -68,10 +70,12 @@ include('header.php');
 	<div class="grid-10">	
 	<h3>Course Manager</h3>
 	
-			<p>Create New Course</p>	
+			<b>Create New Course</b>	
 	<form name="courses1" class="coursereg" id="hongkiat-form" method="post" action="createcourse.php">
-	<input type="text" class="txtinput" name="coursename" />
-	<input type="textarea" row="2" class="txtinput" name="coursedesc" />
+	<label>Course Name</label>
+	<input type="text" id="coursename1" class="txtinput" name="coursename" />
+	<label>Course Description</label>
+	<textarea row="2" columns="2" id="coursedesc1" class="txtinput" name="coursedesc"></textarea>
 	<section id="buttons">		
 	<input type="submit" id="submitbtn" class="submitbtn" name="createcourse" value="Create" />
 </section>	

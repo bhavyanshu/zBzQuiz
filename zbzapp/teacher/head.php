@@ -26,10 +26,15 @@ function getpageTitle($titleset){
             <link rel="stylesheet" href="../css/form-style.css">
   								<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
             <script src="../js/respond-min.js" type="text/javascript"></script>
+            <script src="../js/jquery.shorten.1.0.js" type="text/javascript"></script>
             <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
             <script>window.jQuery || document.write('<script src="../scripts/jquery164min.js">\x3C/script>')</script><!--local fallback for JQuery-->
-			<script src="../js/jquery.flexslider-min.js" type="text/javascript"></script>
+								<script src="../js/jquery.flexslider-min.js" type="text/javascript"></script>
             <link rel="stylesheet" href="../css/flexslider.css" />
+            
+            <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+								<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+								<script src="http://malsup.github.com/jquery.form.js"></script>
             
             <script type="text/javascript">
 				  $(window).load(function() {

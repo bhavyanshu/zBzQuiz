@@ -3,6 +3,16 @@ require_once('../config.php');
 $titleset="Teacher's login";
 include('header.php');
 ?>
+<script> 
+   $(document).ready(function() { 
+   $("#displaycourseStats").load("fetchcourses.php"); // call as soon as page load
+   $('.coursereg').ajaxForm(function() { 
+     $('#msg').val(''); // alert("Thank you for posting!"); 
+     $("#displaycourseStats").load("fetchcourses.php")
+  }); 
+});  
+</script> 
+
 <!--========================================================================== Content Part 1 =====================================================================================-->
 
 	<div class="wrapper">
@@ -55,32 +65,31 @@ include('header.php');
 ?>
 																
 																</div>
-	<div class="grid-6 grid green">	
+	<div class="grid-10">	
 	<h3>Course Manager</h3>
+	
+			<p>Create New Course</p>	
+	<form name="courses1" class="coursereg" id="hongkiat-form" method="post" action="createcourse.php">
+	<input type="text" class="txtinput" name="coursename" />
+	<input type="textarea" row="2" class="txtinput" name="coursedesc" />
+	<section id="buttons">		
+	<input type="submit" id="submitbtn" class="submitbtn" name="createcourse" value="Create" />
+</section>	
+</form>	
+<br/>	
+	
 	<br/>
 	<?php
-	$teacherID=$_SESSION['teacherid']; //uid in mysql DB.
+
 	?>
-	<?php 
-	$fetch_courses=$dbinfo->prepare("SELECT * FROM teacher_course_status where uid = ?");
-	$fetch_courses->execute(array($teacherID));
-	$result=$fetch_courses->fetchALL();
-	if($result)
-	{
-		echo "<p>Courses by you</p>";
-		}
-		else
-		{
-			echo "<h5>There are currently no courses registered by you.</h5>";
-			}
-	?>
+	<br/>
+	<div id="displaycourseStats">
 	
-	<br/>		
-	</div>												
-<div class="grid-6 grid grey">	
-	<p>Create New Course</p>	
-	<form name="hongkiat" id="hongkiat-form" method="post" action=""></form>
 	</div>
+		
+	</div>												
+	
+
 			</div><!--end of grids-->
 
 		</div><!--end of wrapper-->

@@ -24,7 +24,7 @@ a.morelink {
 	<?php 
 	require_once('../config.php');
 		$teacherID=$_SESSION['teacherid']; //uid in mysql DB.
-	$fetch_courses=$dbinfo->prepare("SELECT * FROM teacher_course_status where uid = ?");
+	$fetch_courses=$dbinfo->prepare("SELECT * FROM teacher_course_status where uid = ? ORDER BY courseid DESC");
 	$fetch_courses->execute(array($teacherID));
 	$result=$fetch_courses->fetchALL();
 	if($result)
@@ -33,7 +33,7 @@ a.morelink {
 		foreach($result as $rowcourse)
 		{
 			?>
-			<div class="grid-6 grid green" style="width:auto;">
+			
 			<p>	
 			<?
 			echo "<b>Course ID: </b>".$rowcourse['courseid'];
@@ -41,8 +41,8 @@ a.morelink {
 			?>
 			<form name="hongkiat" id="hongkiat-form" method="post" action="createtest.php">
 			<section id="buttons">
-			<input type="submit" style="height: 1.5em;" name="createtest" id="submitbtn" class="submitbtn" tabindex="7" value="Create Mock Test">
-			</section>			
+			<input type="submit" name="createtest" id="resetbtn" style="height:1.5em;" value="Create Mock Test">
+			</section>		
 			</form>
 			<br>
 			<br>
@@ -51,7 +51,7 @@ a.morelink {
 			}
 			?>
 			</p>
-			</div>
+		
 			<?
 		}
 		else

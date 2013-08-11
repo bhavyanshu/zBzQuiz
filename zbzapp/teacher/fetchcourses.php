@@ -1,7 +1,7 @@
  <script src="../js/jquery.shorten.1.0.js" type="text/javascript"></script>
 	<script type="text/javascript">
    $(".comment").shorten({
-    "showChars" : 30,
+    "showChars" : 40,
     "moreText"  : "More",
     "lessText"  : "Less",
 });
@@ -33,21 +33,14 @@ a.morelink {
 		foreach($result as $rowcourse)
 		{
 			?>
-			
 			<p>	
 			<?
 			echo "<b>Course ID: </b>".$rowcourse['courseid'];
-			echo "<br><i><b>Course Name:</b> </i>".$rowcourse['coursename'];
-			?>
-			<form name="hongkiat" id="hongkiat-form" method="post" action="createtest.php">
-			<section id="buttons">
-			<input type="submit" name="createtest" id="resetbtn" style="height:1.5em;" value="Create Mock Test">
-			</section>		
-			</form>
-			<br>
-			<br>
-			<?
-			echo "<div class=\"comment\">Course Description: ".$rowcourse['coursedesc']."</div><hr>";		
+			echo "<br><b>Course Name: </b>".$rowcourse['coursename'];	
+			echo "<form name=\"hongkiat".$rowcourse['courseid']."\" id=\"hongkiat-form\" method=\"post\" action=\"createtest.php\">";
+			echo "<input type=\"hidden\" name=\"courseid\" value=\"".$rowcourse['courseid']."\" />";
+			echo "<section id=\"buttons\"><input type=\"submit\" name=\"createtest\" id=\"resetbtn\" style=\"height:1.5em;\" value=\"Create New Test for this Course\"></section></form><br><br>";		
+			echo "<div class=\"comment\"><b>Course Description: </b>".$rowcourse['coursedesc']."</div><hr>";		
 			}
 			?>
 			</p>

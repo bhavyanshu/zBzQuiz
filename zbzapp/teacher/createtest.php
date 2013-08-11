@@ -3,21 +3,7 @@ require_once('../config.php');
 $titleset="Course Manager for Teachers";
 include('header.php');
 ?>
-<script> 
-   $(document).ready(function() { 
-   $("#displaycourseStats").load("fetchcourses.php"); // call as soon as page load
-   $('.coursereg').ajaxForm(function() { 
-     $('#coursename1').val(''); 
-				$('#coursedesc1').val('');      
-     alert("Created course. Please scroll down to view."); 
-     $("#displaycourseStats").load("fetchcourses.php")
-  }); 
-});  
-</script> 
-
-<!--========================================================================== Content Part 1 =====================================================================================-->
-
-	<div class="wrapper">
+<div class="wrapper">
 
 						<div class="grids">
 						<h2>Welcome to zBzQuiz Web App Interface</h2>
@@ -68,16 +54,20 @@ include('header.php');
 																
 																</div>
 	<div class="grid-10">	
-	<h3>Course Manager</h3>
+	<h3>Create New Test</h3>
 	
-			<b>Create New Course</b>	
+		
 	<form name="courses1" class="coursereg" id="hongkiat-form" method="post" action="createcourse.php">
-	<label>Course Name</label>
-	<input type="text" id="coursename1" class="txtinput" name="coursename" />
-	<label>Course Description</label>
-	<textarea row="2" columns="2" id="coursedesc1" class="txtinput" name="coursedesc"></textarea>
+	<label>Test Name</label>
+	<input type="text" id="testname" class="txtinput" name="testname" />
+	<label>Test Description</label>
+	<textarea row="2" columns="2" id="testdesc" class="txtinput" name="testdesc"></textarea>
 	<section id="buttons">		
-	<input type="submit" id="submitbtn" class="submitbtn" name="createcourse" value="Create" />
+	<label>Total Number of Questions</label>
+	<input type="text" id="testques" class="txtinput" name="testques" />
+	<label>Test Duration</label>
+	<input type="text" id="testduration" class="txtinput" name="testduration" />
+	<input type="submit" id="submitbtn" class="submitbtn" name="createtest" value="Create" />
 </section>	
 </form>	
 <br/>	
@@ -87,9 +77,7 @@ include('header.php');
 
 	?>
 	<br/>
-	<div id="displaycourseStats">
-	
-	</div>
+
 		
 	</div>												
 	
@@ -98,8 +86,6 @@ include('header.php');
 
 		</div><!--end of wrapper-->
 <hr />
-
-
 <?php
 include('footer.php');
 ?>

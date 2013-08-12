@@ -1,6 +1,6 @@
 <?php
 require_once('../config.php');
-$titleset="Course Manager for Teachers";
+$titleset="Create New Test";
 include('header.php');
 ?>
 <div class="wrapper">

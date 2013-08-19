@@ -7,8 +7,8 @@ This project is not ready yet. Kindly check back later.
 Status: No releases yet. Currently under development.
 
 List of contributors 
-1) Bhavyanshu Parasher (bhavyanshu@codershangout.org)
-2) Chander Khaneja
+1.) Bhavyanshu Parasher (bhavyanshu@codershangout.org)
+2.) Chander Khaneja
 
 This is also our Final Year major project. 
 Expected Release Date : 20th September 2013

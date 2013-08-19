@@ -44,9 +44,6 @@ Go to http://ondras.zarovi.cz/sql/demo/ and import the dbSchema_under_considerat
 SETUP
 -----
 
-
-#####Site Setup:
-
 1) Download and install xampp(windows)/lampp(linux)/mampp(Mac OS) to get php, mysql and apache server.  
 2) Move the zbzapp folder to the htdocs (Usually in C://windows/xampp) folder. (or /opt/lampp//htdocs in linux).    
-3) The folder "Setup Utils" contains the .sql file so that you can import it via your phpmyadmin. (will be updated accordingly as the development progresses). 
+3) The folder "Setup Utils" contains the zbzapp_main.sql file so that you can import it via your phpmyadmin. (will be updated accordingly as the development progresses). 

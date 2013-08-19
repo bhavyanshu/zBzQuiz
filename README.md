@@ -32,7 +32,21 @@ implied. See the License for the specific language governing
 permissions and limitations under the License.
 
 
+CONTRIBUTION
+------------
+
 *******************
 If interested, please help in normalizing the database 
 Go to http://ondras.zarovi.cz/sql/demo/ and import the dbSchema_under_consideration.xml file. Thanks a lot!
 *******************
+
+
+SETUP
+-----
+
+
+#####Site Setup:
+
+1) Download and install xampp(windows)/lampp(linux)/mampp(Mac OS) to get php, mysql and apache server.  
+2) Move the zbzapp folder to the htdocs (Usually in C://windows/xampp) folder. (or /opt/lampp//htdocs in linux).    
+3) The folder "Setup Utils" contains the .sql file so that you can import it via your phpmyadmin. (will be updated accordingly as the development progresses). 

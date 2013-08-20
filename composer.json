@@ -1,0 +1,30 @@
+{
+    "name": " bhavyanshu/zBzQuiz",
+    "type": "Web APP",
+    "description": "zBzQuiz is responsive, fresh, modern, bold and completely free web application used for hosting MCQ quizes in schools, colleges and other institutes.",
+    "homepage": "https://github.com/bhavyanshu/zBzQuiz",
+    "keywords": ["zBzQuiz", "quiz app"],
+    "license": "Apache License Version 2.0",
+    "authors": [
+        {
+            "name": "Bhavyanshu Parasher",
+            "email": "bhavyanshu.spl@gmail.com"
+        },
+        {
+            "name": "Chander Khaneja"
+        }
+    ],
+    "require": {
+        "php":                ">=5.3.2",
+        "ext-curl":           "*"
+    },
+    "autoload": {
+        "psr-0": { "Github\\": "zbzapp/" }
+    },
+      "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
+

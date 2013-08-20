@@ -6,5 +6,7 @@ php:
 
 before_script:
   - php zbzapp/index.php
+  - composer selfupdate
+  - composer install
 
 script: phpunit

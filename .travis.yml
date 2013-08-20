@@ -5,8 +5,8 @@ php:
   - 5.4
 
 before_script:
-  - composer selfupdate
-  - composer install
+  - wget http://getcomposer.org/composer.phar
+  - php composer.phar install
   - php zbzapp/index.php
 
 script: phpunit

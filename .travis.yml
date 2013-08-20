@@ -4,6 +4,6 @@ php:
   - 5.5
 
 before_script:
-  - php zbzapp/index.php
+  - composer install --dev
 
 script: phpunit

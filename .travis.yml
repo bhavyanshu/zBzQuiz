@@ -5,8 +5,8 @@ php:
   - 5.4
 
 before_script:
-  - php zbzapp/index.php
   - composer selfupdate
   - composer install
+  - php zbzapp/index.php
 
 script: phpunit

@@ -1,6 +1,6 @@
 zBzQuiz
 =======
-
+[![Build Status](https://travis-ci.org/bhavyanshu/zBzQuiz.png?branch=master)](https://travis-ci.org/bhavyanshu/zBzQuiz)
 
 This project is not ready yet. Kindly check back later.
 

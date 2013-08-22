@@ -8,7 +8,7 @@ This project is not ready yet. Kindly check back later.
 
 ###List of contributors 
 
-1. Bhavyanshu Parasher (bhavyanshu@codershangout.org).
+1. Bhavyanshu Parasher (Email:bhavyanshu@codershangout.org || Website:http://bhavyanshu.github.io).
 2. Chander Khaneja.
 
 This is also our Final Year major project.   
@@ -18,7 +18,7 @@ Expected Release Date : 20th September 2013
 LICENCE
 -------
 
-> Copyright 2013 Bhavyanshu Parasher & Chander Khaneja (http://www.codershangout.org).
+> Copyright 2013 Bhavyanshu Parasher (http://bhavyanshu.github.io) & Chander Khaneja.
 
 > Licensed under the Apache License, Version 2.0 (the "License"); you
 may not use this project except in compliance with the License. You 

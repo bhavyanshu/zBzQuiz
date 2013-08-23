@@ -1,5 +1,6 @@
 zBzQuiz
 =======
+
 [![Build Status](https://travis-ci.org/bhavyanshu/zBzQuiz.png?branch=master)](https://travis-ci.org/bhavyanshu/zBzQuiz)
 
 This project is not ready yet. Kindly check back later.
@@ -12,7 +13,7 @@ This project is not ready yet. Kindly check back later.
 2. Chander Khaneja.
 
 This is also our Final Year major project.   
-Expected Release Date : 20th September 2013
+<b>Expected Release Date</b> : 20th September 2013
 
 
 LICENCE

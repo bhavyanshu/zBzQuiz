@@ -43,28 +43,7 @@ include('header.php');
 ?>
 <p><a class="button" href="chklogout.php">Log out!</a></p>
 
-<?php   
-	}
- else
-  	{
-		echo "<p><b>You are currently not logged in!</b></p>"; ?>
-			<form name="hongkiat" id="hongkiat-form" method="post" action="chklogin.php">
-																					<section id="aligned">
-																				<p>		<input type="text" name="username" id="username" placeholder="Your username" autocomplete="off" tabindex="1" class="txtinput">
-																						<input type="password" name="password" id="userpass" placeholder="Your password" autocomplete="off" tabindex="2" class="txtinput"></p>
-																			<section>
-																			<section id="buttons">
-																		<p>				<input type="reset" name="reset" id="resetbtn" class="resetbtn" value="Reset">
-																						<input type="submit" name="submit" id="submitbtn" class="submitbtn" tabindex="7" value="Log In">
-																						
-																						<br style="clear:both;"></p>
-																					</section>
-																		</form>
-																		
-																	<p>	<a class="button" href="tearegister.php">Sign Up!</a></p>
-<?php
-	}
-?>
+
 																
 																</div>
 	<div class="grid-10">	
@@ -92,7 +71,28 @@ include('header.php');
 	</div>
 		
 	</div>												
-	
+<?php   
+	}
+ else
+  	{
+		echo "<p><b>You are currently not logged in!</b></p>"; ?>
+			<form name="hongkiat" id="hongkiat-form" method="post" action="chklogin.php">
+																					<section id="aligned">
+																				<p>		<input type="text" name="username" id="username" placeholder="Your username" autocomplete="off" tabindex="1" class="txtinput">
+																						<input type="password" name="password" id="userpass" placeholder="Your password" autocomplete="off" tabindex="2" class="txtinput"></p>
+																			<section>
+																			<section id="buttons">
+																		<p>				<input type="reset" name="reset" id="resetbtn" class="resetbtn" value="Reset">
+																						<input type="submit" name="submit" id="submitbtn" class="submitbtn" tabindex="7" value="Log In">
+																						
+																						<br style="clear:both;"></p>
+																					</section>
+																		</form>
+																		
+																	<p>	<a class="button" href="tearegister.php">Sign Up!</a></p>
+<?php
+	}
+?>	
 
 			</div><!--end of grids-->
 

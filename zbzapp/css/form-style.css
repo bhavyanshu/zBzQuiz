@@ -171,3 +171,30 @@
         
       box-shadow: inset 0 1px 0 rgba(256,256,256,0.4),0 1px 3px rgba(0,0,0,0.5);  
     }  
+    
+			
+        .pure-button-green,
+        .pure-button-error,
+        .pure-button-warning,
+        .pure-button-secondary {
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .pure-button-green {
+            background: rgb(28, 184, 65); /* this is a green */
+        }
+
+        .pure-button-pink {
+            background: rgb(256, 10, 250); /* this is a maroon */
+        }
+
+        .pure-button-orange {
+            background: rgb(223, 117, 20); /* this is an orange */
+        }
+
+        .pure-button-blue {
+            background: rgb(66, 184, 221); /* this is a light blue */
+        }
+    

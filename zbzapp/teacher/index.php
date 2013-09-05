@@ -33,8 +33,9 @@ include('header.php');
 </div>
 	<div class="grid-6 grid green">	
 	<h3>Quiz Manager</h3>
-	<p><a href="coursemgr.php">Manage Courses</a></p>
-	<p>View Results</p>		
+	<p><a href="coursemgr.php"> <button class="pure-button pure-button-green">Manage Courses</button></a></p>
+	<p></p>
+	<p>Analyze Test</p>		
 	</div>				
 		
 <?php   

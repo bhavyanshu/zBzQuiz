@@ -7,6 +7,21 @@
 });
 </script>
 
+
+<script type="text/javascript">
+$('document').ready(function()
+{
+$('.delete-course').ajaxForm( {
+					beforeSend: function() {
+             $('#del-message').html("<img src='../img/ajax-loader.gif' title='Loading..' alt='Loading..' />");
+            },
+        success: function(data) {
+                $('#del-message').html(data);
+                $("#displaycourseStats").load("fetchcourses.php");
+        }
+});
+});
+</script>
 <style>
 a.morelink {
     text-decoration:none;
@@ -21,6 +36,7 @@ a.morelink {
     margin: 10px;
 }
 </style>
+
 	<?php 
 	require_once('../config.php');
 		$teacherID=$_SESSION['teacherid']; //uid in mysql DB.
@@ -30,6 +46,7 @@ a.morelink {
 	if($result)
 	{
 		echo "<h5>Courses by you</h5>";
+		echo "<div id=\"del-message\"></div>";
 		foreach($result as $rowcourse)
 		{
 			?>
@@ -39,12 +56,16 @@ a.morelink {
 			echo "<br><b>Course Name: </b>".$rowcourse['coursename'];	
 			echo "<form name=\"hongkiat".$rowcourse['courseid']."\" id=\"hongkiat-form\" method=\"post\" action=\"createtest.php\">";
 			echo "<input type=\"hidden\" name=\"courseid\" value=\"".$rowcourse['courseid']."\" />";
-			echo "<section id=\"buttons\"><input type=\"submit\" name=\"createtest\" id=\"resetbtn\" style=\"height:1.5em;\" value=\"Manage Tests\"></section></form><br><br>";		
+			echo "<button class=\"pure-button pure-button-green\">Create Test</button></form><br>";		
+			echo "<a href=\"#\"> <button class=\"pure-button pure-button-pink\">Manage Tests</button></a>";
+			echo "<form action=\"deletecourse.php\" method=\"post\" class=\"delete-course\"><input type=\"hidden\" name=\"courseid\" value=\"".$rowcourse['courseid']."\" /><button class=\"pure-button pure-button-blue\" type=\"submit\">Delete Course</button></form>";
+			echo "<a href=\"#\"> <button class=\"pure-button pure-button-orange\">Enroll Students</button></a>";
 			echo "<div class=\"comment\"><b>Course Description: </b>".$rowcourse['coursedesc']."</div><hr>";		
+			
 			}
 			?>
 			</p>
-		
+
 			<?
 		}
 		else
@@ -52,4 +73,3 @@ a.morelink {
 			echo "<h5>There are currently no courses registered by you.</h5>";
 			}
 	?>
-

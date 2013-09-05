@@ -39,7 +39,7 @@ a.morelink {
 			echo "<br><b>Course Name: </b>".$rowcourse['coursename'];	
 			echo "<form name=\"hongkiat".$rowcourse['courseid']."\" id=\"hongkiat-form\" method=\"post\" action=\"createtest.php\">";
 			echo "<input type=\"hidden\" name=\"courseid\" value=\"".$rowcourse['courseid']."\" />";
-			echo "<section id=\"buttons\"><input type=\"submit\" name=\"createtest\" id=\"resetbtn\" style=\"height:1.5em;\" value=\"Create New Test for this Course\"></section></form><br><br>";		
+			echo "<section id=\"buttons\"><input type=\"submit\" name=\"createtest\" id=\"resetbtn\" style=\"height:1.5em;\" value=\"Manage Tests\"></section></form><br><br>";		
 			echo "<div class=\"comment\"><b>Course Description: </b>".$rowcourse['coursedesc']."</div><hr>";		
 			}
 			?>

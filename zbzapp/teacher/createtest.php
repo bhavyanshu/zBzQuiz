@@ -54,19 +54,19 @@ include('header.php');
 																
 																</div>
 	<div class="grid-10">	
-	<h3>Create New Test</h3>
+	<h3>You are creating new test for <?php echo "Course ID : ".$_POST['courseid']; ?></h3>
 	
 		
 	<form name="courses1" class="coursereg" id="hongkiat-form" method="post" action="createcourse.php">
 	<label>Test Name</label>
-	<input type="text" id="testname" class="txtinput" name="testname" />
+	<input type="text" id="testname" class="txtinput" placeholder="eg, java_test_1" name="testname" />
 	<label>Test Description</label>
-	<textarea row="2" columns="2" id="testdesc" class="txtinput" name="testdesc"></textarea>
+	<textarea row="2" columns="2" id="testdesc" placeholder="What is it about?" class="txtinput" name="testdesc"></textarea>
 	<section id="buttons">		
 	<label>Total Number of Questions</label>
 	<input type="text" id="testques" class="txtinput" name="testques" />
 	<label>Test Duration</label>
-	<input type="text" id="testduration" class="txtinput" name="testduration" />
+	<input type="text" id="testduration" placeholder="The Time should only be in minutes." class="txtinput" name="testduration" />
 	<input type="submit" id="submitbtn" class="submitbtn" name="createtest" value="Create" />
 </section>	
 </form>	

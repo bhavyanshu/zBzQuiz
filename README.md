@@ -16,7 +16,7 @@ This is also our Final Year major project.
 <b>Expected Release Date</b> : 22th September 2013
 
 
-LICENCE
+LICENSE
 -------
 
 > Copyright 2013 Bhavyanshu Parasher (http://bhavyanshu.github.io) & Chander Khaneja.

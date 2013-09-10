@@ -20,12 +20,13 @@ Chander Khaneja
         6.1.Introduction
         6.2.Database Security
         6.3.Filesystem Security
-        6.4.Error Reporting
     7.Features
-        7.1.HTTP authentication with PHP
-        7.2.Cookies & Sessions
-        7.3.Advanced User Interface
-	7.4.Password Hashing — Safe Password Hashing
+        7.1.User Authentication & Roles
+	7.2 Password Hashing — Safe Password Hashing
+        7.3.Advanced User Interface for Managing Tests
+	7.4.Realtime User Interface for Search
+	7.5.Responsive Layout
+	7.6.Timer interactivity with UI.  
     8.FAQ: Frequently Asked Questions
         8.1.General Information
         8.2.Mailing lists
@@ -78,7 +79,7 @@ The source code is written in php mainly. All the core modules are in php. Inter
 
 The web application is very secure. We have used the best of php in making it secure. We know nothing is completely secure and keeping this in mind we accept any pull requests regarding the security of the application because it is our top priority.              
 
-1. Database Security: We are using the object oriented approach using the PDO classes. PDO provides us with prepared statements that enhance the security of the web application. It is latest and we do not need to modify the code for using the application with a different database driver.                        
+1. Database Security: We are using the object oriented approach using the PDO classes. PDO provides us with prepared statements that enhance the security of the web application. It is latest and we do not need to modify the code for using the application with a different database driver. PDO is a little more intuitive, and it feels more truly object oriented whereas mysqli feels like it is just a procedural API that has been objectified. PDO moreover helps in preventing sqlinjections because PDO::quote() places quotes around the input string and escapes special characters within the input string, using a quoting style appropriate to the underlying database driver.                      
 
-2. Filesystem Security: 
+2. Filesystem Security: Direct access to all the module files has been restricted the file system structure is kept pretty simple and understandable. The directories have been properly indexed and does not allow methods to directly crawl the files without having authentication parameters verified. 
 

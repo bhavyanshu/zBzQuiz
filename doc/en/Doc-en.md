@@ -22,11 +22,11 @@ Chander Khaneja
         6.3.Filesystem Security
     7.Features
         7.1.User Authentication & Roles
-	7.2 Password Hashing — Safe Password Hashing
+        7.2 Password Hashing — Safe Password Hashing
         7.3.Advanced User Interface for Managing Tests
-	7.4.Realtime User Interface for Search
-	7.5.Responsive Layout
-	7.6.Timer interactivity with UI.  
+        7.4.Realtime User Interface for Search
+        7.5.Responsive Layout
+        7.6.Timer interactivity with UI.  
     8.FAQ: Frequently Asked Questions
         8.1.General Information
         8.2.Mailing lists

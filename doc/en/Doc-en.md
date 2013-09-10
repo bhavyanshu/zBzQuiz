@@ -1,10 +1,11 @@
-#HELP DOCUMENT
+#HELP DOCUMENT     
+       
+zBzApp Manual by:         
+Bhavyanshu Parasher                   
+Chander Khaneja                                           
+© 2013                           
 
-zBzApp Manual
-by:
-Bhavyanshu Parasher
-Chander Khaneja
-© 2013
+##Table Of Contents
 
     1.LICENSE
     2.Preface

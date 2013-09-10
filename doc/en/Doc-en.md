@@ -6,40 +6,33 @@ Bhavyanshu Parasher
 Chander Khaneja
 © 2013
 
-    LICENSE
-    Preface
-    Getting Started
-        Introduction
-        A simple tutorial
-    Installation and Configuration
-        General Installation Considerations
-        Installation on *nix systems
-        Installation on Mac OS X
-        Installation on Windows systems
-    Language Reference
-    Security
-        Introduction
-        Filesystem Security
-        Database Security
-        Error Reporting
-    Features
-        HTTP authentication with PHP
-        Cookies
-        Sessions
-    FAQ — FAQ: Frequently Asked Questions
-        General Information
-        Mailing lists
-        Obtaining PHP
-        Database issues
-        Installation
-        Build Problems
-        Using PHP
-        Password Hashing — Safe Password Hashing
-        PHP and HTML
-        PHP and COM
-        PHP and other languages
-        Migrating from PHP 4 to PHP 5
-        Miscellaneous Questions
-    Appendices
-        Apache License 2.0
-        Changelog
+    1.LICENSE
+    2.Preface
+    3.Getting Started
+        3.1.Introduction
+        3.2.A simple tutorial
+    4.Installation and Configuration
+        4.1.General Installation Considerations
+        4.2.Installation on *nix systems
+        4.3.Installation on Mac OS X
+        4.4.Installation on Windows systems
+    5.Language Reference
+    6.Security
+        6.1.Introduction
+        6.2.Filesystem Security
+        6.3.Database Security
+        6.4.Error Reporting
+    7.Features
+        7.1.HTTP authentication with PHP
+        7.2.Cookies & Sessions
+        7.3.Advanced User Interface
+	7.4.Password Hashing — Safe Password Hashing
+    8.FAQ: Frequently Asked Questions
+        8.1.General Information
+        8.2.Mailing lists
+        8.3.Obtaining PHP
+        8.4.Database issues
+        8.5.Installation
+    9.Appendices
+        9.1.Apache License 2.0
+        9.2.Changelog

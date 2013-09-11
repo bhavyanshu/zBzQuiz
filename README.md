@@ -11,8 +11,11 @@ This project is not ready yet. Kindly check back later.
 
 1. Bhavyanshu Parasher (Email:bhavyanshu@codershangout.org || Website:http://bhavyanshu.github.io).
 2. Chander Khaneja.
-3. Shilpa Mahajan
-This is also our Final Year major project.   
+          
+
+This is also our Final Year major project for ITM University under Shilpa Mahajan (Mentor).   
+
+
 <b>Expected Release Date</b> : 22th September 2013
 
 

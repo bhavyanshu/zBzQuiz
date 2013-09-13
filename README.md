@@ -13,7 +13,7 @@ This project is not ready yet. Kindly check back later.
 2. Chander Khaneja.
           
 
-This is also our Final Year major project for ITM University under Shilpa Mahajan (Mentor).   
+This is also our Final Year major project for ITM University under Shilpa Mahajan <shilpa.kaushal@gmail.com> (Mentor).   
 
 
 <b>Expected Release Date</b> : 22th September 2013

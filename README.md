@@ -1,11 +1,11 @@
 zBzQuiz
 =======
 
-[![Build Status](https://travis-ci.org/bhavyanshu/zBzQuiz.png?branch=master)](https://travis-ci.org/bhavyanshu/zBzQuiz)
-
 This project is not ready yet. Kindly check back later.
 
-<b>Status</b>: No releases yet. Currently under development.
+<b>Status</b>: [![Build Status](https://travis-ci.org/bhavyanshu/zBzQuiz.png?branch=master)](https://travis-ci.org/bhavyanshu/zBzQuiz)                                 
+
+**Releases** :  No releases yet. Currently under development.                                    
 
 ###List of contributors 
 

@@ -1,0 +1,29 @@
+<html>
+<head>
+  <link href="http://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="static/css/screen.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" href="static/css/print.css" type="text/css" media="print" media="print">
+</head>
+<title>WebOCR</title>
+<body>
+<div id="header">
+<div id="subheader"></div></div>
+<div class="container">
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<h8 class="warning span-8">{{ message }}</h8>
+{% endfor %}
+{% endif %}
+{% endwith %}
+<form id="upload" class="span-16 prepend-top" action="." method="POST" enctype="multipart/form-data">
+<label class="span-8 last">{{ form.img.label }}</label>
+<button class="link span-3 append-1" type="file" id="img" name="img"/>Choose File
+<button class="link span-3 last append-bottom prepend-2" type="submit" />
+Upload
+</form>
+</div><!-- .container -->
+<!--</div> #subheader -->
+<!--</div>#header -->
+</body>
+</html>

@@ -1,0 +1,38 @@
+python: /opt/lampp/lib/libz.so.1: no version information available (required by python)
+Traceback (most recent call last):
+  File "./tesseract.py", line 143, in <module>
+    print image_to_string(image)
+  File "./tesseract.py", line 125, in image_to_string
+    raise TesseractError(status, errors)
+__main__.TesseractError: (1, "tesseract: /opt/lampp/lib/libgcc_s.so.1: version `GCC_4.2.0' not found (required by /usr/lib/i386-linux-gnu/libstdc++.so.6)")
+sudo: no tty present and no askpass program specified
+sudo: no tty present and no askpass program specified
+sudo: no tty present and no askpass program specified
+Sorry, try again.
+Sorry, try again.
+Sorry, try again.
+sudo: 3 incorrect password attempts
+Sorry, try again.
+Sorry, try again.
+Sorry, try again.
+Sorry, try again.
+Sorry, try again.
+sudo: 3 incorrect password attempts
+sudo: no tty present and no askpass program specified
+su: must be run from a terminal
+su: must be run from a terminal
+su: must be run from a terminal
+python: /opt/lampp/lib/libz.so.1: no version information available (required by python)
+Traceback (most recent call last):
+  File "./tesseract.py", line 143, in <module>
+    print image_to_string(image)
+  File "./tesseract.py", line 125, in image_to_string
+    raise TesseractError(status, errors)
+__main__.TesseractError: (1, "tesseract: /opt/lampp/lib/libgcc_s.so.1: version `GCC_4.2.0' not found (required by /usr/lib/i386-linux-gnu/libstdc++.so.6)")
+python: /opt/lampp/lib/libz.so.1: no version information available (required by python)
+Traceback (most recent call last):
+  File "./tesseract.py", line 143, in <module>
+    print image_to_string(image)
+  File "./tesseract.py", line 125, in image_to_string
+    raise TesseractError(status, errors)
+__main__.TesseractError: (1, "tesseract: /opt/lampp/lib/libgcc_s.so.1: version `GCC_4.2.0' not found (required by /usr/lib/i386-linux-gnu/libstdc++.so.6)")

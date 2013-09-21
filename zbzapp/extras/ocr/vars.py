@@ -19,7 +19,7 @@ except ImportError:
 
 
 def AskForFile():
-    fname = fileopenbox(msg='Filename: ', title='Please select the scanned document', default='*', filetypes= ["*.png", ["*.jpg", "*.jpeg", "*.gif"]  ]) 
+    fname = fileopenbox(msg='Filename: ', title='Please select the scanned document', default='*', filetypes= ["*.png", "*.jpg", "*.jpeg"]) 
     content=image_to_string(Image.open(fname))
     choices=['Copy to Clipboard','Wrong output? Try again!']
     textbox(msg='The following text was extracted from the image', title='Text', text=content, codebox=0)

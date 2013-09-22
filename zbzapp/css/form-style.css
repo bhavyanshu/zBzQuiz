@@ -197,4 +197,20 @@
         .pure-button-blue {
             background: rgb(66, 184, 221); /* this is a light blue */
         }
+
+
+	.entity-element-single {
+		background: #FFFF66;
+		padding:25px 50px 25px;
+		border-radius:25px;
+	}
     
+	.delete-course {
+	width:130px;	
+	}
+
+	.buttons-row {
+        margin: 5px auto 0;
+        width: 200px;
+	display: inline-block;
+	}

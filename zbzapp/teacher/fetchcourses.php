@@ -33,6 +33,11 @@ a.morelink {
 .comment {
     width: 100%;
 }
+#navlist li
+{
+display: inline-block;
+list-style-type: none;
+}
 </style>
 
 	<?php 
@@ -52,17 +57,15 @@ a.morelink {
 			<b>Course ID: </b> <?php echo $rowcourse['courseid']; ?>
 			<br><b>Course Name: </b> <?php $rowcourse['coursename']; ?>
 			<div class="comment"><b>Course Description: </b><?php echo $rowcourse['coursedesc']; ?></div>	
-			<div class="buttons-row">
-			<ul> 
-			<li style="display:inline;"><form style="width:150px;" name="hongkiat" id="hongkiat-form" method="post" action="createtest.php">
+			<ul style="margin:0px;" id="navlist"> 
+			<li><form style="width:115px;" name="hongkiat" id="hongkiat-form" method="post" action="createtest.php">
 			<input type="hidden" name="courseid" value="<?php echo $rowcourse['courseid']; ?>" />
 			<button class="button gray small">Create Test</button></form></li>
-			<li style="display:inline;"><a href="#"> <button class="button gray small">Manage Tests</button></a></li>
-			<li style="display:inline;"><form action="deletecourse.php" method="post" class="delete-course"><input type="hidden" name="courseid" value="<?php echo $rowcourse['courseid'] ?>" /><button class="button gray small" type="submit">Delete Course</button></form></li>
-			<li style="display:inline;"><a href="#"> <button class="button gray small">Enroll Students</button></a></li>
+			<li><a href="#"> <button class="button gray small">Manage Tests</button></a></li>
+			<li><form action="deletecourse.php" method="post" class="delete-course"><input type="hidden" name="courseid" value="<?php echo $rowcourse['courseid'] ?>" /><button class="button gray small" type="submit">Delete Course</button></form></li>
+			<li><a href="#"> <button class="button gray small">Enroll Students</button></a></li>
 			</ul>
 			<hr>			
-			</div>
 			</div>
 			<?
 		}

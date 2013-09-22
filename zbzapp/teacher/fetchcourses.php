@@ -31,9 +31,7 @@ a.morelink {
     display: none;
 }
 .comment {
-    width: 400px;
-    background-color: #f0f0f0;
-    margin: 10px;
+    width: 100%;
 }
 </style>
 
@@ -50,24 +48,25 @@ a.morelink {
 		foreach($result as $rowcourse)
 		{
 			?>
-			<p>	
-			<?
-			echo "<b>Course ID: </b>".$rowcourse['courseid'];
-			echo "<br><b>Course Name: </b>".$rowcourse['coursename'];	
-			echo "<form name=\"hongkiat".$rowcourse['courseid']."\" id=\"hongkiat-form\" method=\"post\" action=\"createtest.php\">";
-			echo "<input type=\"hidden\" name=\"courseid\" value=\"".$rowcourse['courseid']."\" />";
-			echo "<button class=\"pure-button pure-button-green\">Create Test</button></form><br>";		
-			echo "<a href=\"#\"> <button class=\"pure-button pure-button-pink\">Manage Tests</button></a>";
-			echo "<form action=\"deletecourse.php\" method=\"post\" class=\"delete-course\"><input type=\"hidden\" name=\"courseid\" value=\"".$rowcourse['courseid']."\" /><button class=\"pure-button pure-button-blue\" type=\"submit\">Delete Course</button></form>";
-			echo "<a href=\"#\"> <button class=\"pure-button pure-button-orange\">Enroll Students</button></a>";
-			echo "<div class=\"comment\"><b>Course Description: </b>".$rowcourse['coursedesc']."</div><hr>";		
-			
-			}
-			?>
-			</p>
-
+			<div class="entity-element-single">	
+			<b>Course ID: </b> <?php echo $rowcourse['courseid']; ?>
+			<br><b>Course Name: </b> <?php $rowcourse['coursename']; ?>
+			<div class="comment"><b>Course Description: </b><?php echo $rowcourse['coursedesc']; ?></div>	
+			<div class="buttons-row">
+			<ul> 
+			<li style="display:inline;"><form style="width:150px;" name="hongkiat" id="hongkiat-form" method="post" action="createtest.php">
+			<input type="hidden" name="courseid" value="<?php echo $rowcourse['courseid']; ?>" />
+			<button class="button gray small">Create Test</button></form></li>
+			<li style="display:inline;"><a href="#"> <button class="button gray small">Manage Tests</button></a></li>
+			<li style="display:inline;"><form action="deletecourse.php" method="post" class="delete-course"><input type="hidden" name="courseid" value="<?php echo $rowcourse['courseid'] ?>" /><button class="button gray small" type="submit">Delete Course</button></form></li>
+			<li style="display:inline;"><a href="#"> <button class="button gray small">Enroll Students</button></a></li>
+			</ul>
+			<hr>			
+			</div>
+			</div>
 			<?
 		}
+	}
 		else
 		{
 			echo "<h5>There are currently no courses registered by you.</h5>";

@@ -21,6 +21,7 @@ function getpageTitle($titleset){
             <link rel="stylesheet" href="../css/inuit.css" />
             <link rel="stylesheet" href="../css/fluid-grid16-1100px.css" />
             <link rel="stylesheet" href="../css/eve-styles.css" />
+            <link rel="stylesheet" href="../css/buttons/buttons.css"
             <link rel="shortcut icon" href="../icon.png" />
             <link rel="apple-touch-icon-precomposed" href="../img/icon.png" />
             <link rel="stylesheet" href="../css/form-style.css">

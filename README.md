@@ -16,7 +16,7 @@ This project is not ready yet. Kindly check back later.
 This is also our Final Year major project for ITM University under Shilpa Mahajan <shilpa.kaushal@gmail.com> (Mentor).   
 
 
-<b>Expected Release Date</b> : 22th September 2013
+<b>Expected Release Date</b> : 29th October 2013
 
 
 LICENSE

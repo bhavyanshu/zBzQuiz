@@ -55,7 +55,7 @@ list-style-type: none;
 			?>
 			<div class="entity-element-single">	
 			<b>Course ID: </b> <?php echo $rowcourse['courseid']; ?>
-			<br><b>Course Name: </b> <?php $rowcourse['coursename']; ?>
+			<br><b>Course Name: </b> <?php echo $rowcourse['coursename']; ?>
 			<div class="comment"><b>Course Description: </b><?php echo $rowcourse['coursedesc']; ?></div>	
 			<ul style="margin:0px;" id="navlist"> 
 			<li><form style="width:115px;" name="hongkiat" id="hongkiat-form" method="post" action="createtest.php">

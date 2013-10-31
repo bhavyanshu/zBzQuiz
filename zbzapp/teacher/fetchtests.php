@@ -6,20 +6,6 @@
     "lessText"  : "Less",
    });
 </script>
-<script type="text/javascript">
-   $('document').ready(function()
-   {
-   $('.delete-course').ajaxForm( {
-   					beforeSend: function() {
-                $('#del-message').html("<img src='../img/ajax-loader.gif' title='Loading..' alt='Loading..' />");
-               },
-           success: function(data) {
-                   $('#del-message').html(data);
-                   $("#displaycourseStats").load("fetchcourses.php");
-           }
-   });
-   });
-</script>
 <style>
    a.morelink {
    text-decoration:none;
@@ -40,8 +26,8 @@
 <?php 
    require_once('../config.php');
    	$teacherID=$_SESSION['teacherid']; //uid in mysql DB.
-   $fetch_courses=$dbinfo->prepare("SELECT * FROM teacher_course_status where uid = ? ORDER BY courseid DESC");
-   $fetch_courses->execute(array($teacherID));
+   $fetch_courses=$dbinfo->prepare("SELECT * FROM course_test_status where courseid = ? ORDER BY testid DESC");
+   $fetch_courses->execute(array($courseID));
    $result=$fetch_courses->fetchALL();
    if($result)
    {
@@ -60,10 +46,11 @@
             <button class="button gray small">Create Test</button>
          </form>
       </li>
-      <li><a href="testmgr.php"> <button class="button gray small">Manage Tests</button></a></li>
+      <li><a href="#"> <button class="button gray small">Manage Tests</button></a></li>
       <li>
          <form action="deletecourse.php" method="post" class="delete-course"><input type="hidden" name="courseid" value="<?php echo $rowcourse['courseid'] ?>" /><button class="button gray small" type="submit">Delete Course</button></form>
       </li>
+      <li><a href="#"> <button class="button gray small">Enroll Students</button></a></li>
    </ul>
    <hr>
 </div>
@@ -72,6 +59,6 @@
    }
    else
    {
-   	echo "<h5>There are currently no courses registered by you.</h5>";
+   	echo "<h5>There are currently no tests created by you.</h5>";
    	}
    ?>

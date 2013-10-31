@@ -3,6 +3,19 @@
    $titleset="Create New Test";
    include('header.php');
    ?>
+
+<script> 
+   $(document).ready(function() { 
+   $("#displaycourseStats").load("fetchtests.php"); // call as soon as page load
+   $('.testreg').ajaxForm(function() { 
+     $('#testname').val(''); 
+   	$('#testdesc').val('');
+	$('#testduration').val('');      
+     alert("Created test. Please scroll down to view."); 
+     $("#displaytestStats").load("fetchtests.php")
+   }); 
+   });  
+</script> 
 <div class="wrapper">
    <div class="grids">
       <h2>Welcome to zBzQuiz Web App Interface</h2>
@@ -47,8 +60,9 @@
             ?>
       </div>
       <div class="grid-10">
-         <h3>You are creating new test for <?php echo "Course ID : ".$_POST['courseid']; ?></h3>
-         <form name="courses1" class="coursereg" id="hongkiat-form" method="post" action="createcourse.php">
+	<?php $fetchCourseID=$_GET['corID']; ?>
+         <h3>You are creating new test for <?php echo "Course ID : ".$fetchCourseID; ?></h3>
+         <form name="test" class="testreg" id="hongkiat-form" method="post" action="test_create_func.php?courseid=<?php echo $fetchCourseID; ?>">
             <label>Test Name</label>
             <input type="text" id="testname" class="txtinput" placeholder="eg, java_test_1" name="testname" />
             <label>Test Description</label>

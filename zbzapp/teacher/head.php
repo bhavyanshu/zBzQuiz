@@ -19,10 +19,11 @@
       <link rel="stylesheet" href="../css/inuit.css" />
       <link rel="stylesheet" href="../css/fluid-grid16-1100px.css" />
       <link rel="stylesheet" href="../css/eve-styles.css" />
-      <link rel="stylesheet" href="../css/buttons/buttons.css"
+      <link rel="stylesheet" href="../css/buttons/buttons.css">
       <link rel="shortcut icon" href="../icon.png" />
       <link rel="apple-touch-icon-precomposed" href="../img/icon.png" />
       <link rel="stylesheet" href="../css/form-style.css">
+      <link rel="stylesheet" href="../css/responsive-table-style.css">	
       <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
       <script src="../js/respond-min.js" type="text/javascript"></script>
       <script src="../js/jquery.shorten.1.0.js" type="text/javascript"></script>
@@ -50,4 +51,7 @@
          .grid-4{ width:22% }
       </style>
       <![endif]-->
+	
+
+
    </head>

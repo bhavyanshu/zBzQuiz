@@ -118,25 +118,6 @@
 						-webkit-gradient(linear, 0% 0%, 0% 100%, from(#63c7fe), to(#58bef7));
 }
 
-/*Blueeeeeeeeeeeeeeeee lol*/
-
-.blue.button{
-
-	color:#1178b1 !important;
-	border:1px solid #96a37b !important;	
-	background-color: #17a1ec;
-	
-	background-image:url('button_bg.png'), url('button_bg.png'), -moz-radial-gradient(center bottom, circle, rgba(23,161,236,1) 0,rgba(23,161,236,0) 100px),-moz-linear-gradient(#17a1ec, #c5e7fa);
-	background-image:url('button_bg.png'), url('button_bg.png'), -webkit-gradient(radial, 50% 100%, 0, 50% 100%, 100, from(rgba(23,161,236,1)), to(rgba(23,161,236,0))),-webkit-gradient(linear, 0% 0%, 0% 100%, from(#17a1ec), to(#c5e7fa));
-}
-
-.blue.button:hover{
-	background-color:#c5e7fa;
-	
-	background-image:url('button_bg.png'), url('button_bg.png'), -moz-radial-gradient(center bottom, circle, rgba(197,231,250,1) 0,rgba(197,231,250,0) 100px),-moz-linear-gradient(#17a1ec, #c5e7fa);
-	background-image:url('button_bg.png'), url('button_bg.png'), -webkit-gradient(radial, 50% 100%, 0, 50% 100%, 100, from(rgba(197,231,250,1)), to(rgba(197,231,250,0))),-webkit-gradient(linear, 0% 0%, 0% 100%, from(#17a1ec), to(#c5e7fa));
-}
-
 /* Green Button */
 
 .green.button{

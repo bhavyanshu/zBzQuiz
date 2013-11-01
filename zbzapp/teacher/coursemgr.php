@@ -1,5 +1,6 @@
 <?php
    require_once('../config.php');
+   require_once('loggedin.php');
    $titleset="Course Manager for Teachers";
    include('header.php');
    ?>

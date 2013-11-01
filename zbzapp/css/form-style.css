@@ -214,3 +214,11 @@
         width: 200px;
 	display: inline-block;
 	}
+
+
+/* Below is for css sprites action buttons */
+
+.search_action_button {width:30px; height:40px; background:url(../img/action_buttons.png) 0 0px;}
+.edit_action_button {width:30px; height:40px; background:url(../img/action_buttons.png) -110px 0;}  
+.delete_action_button {width:30px; height:40px; background:url(../img/action_buttons.png) -115px -100px transparent;}
+.enroll_action_button {width:30px; height:40px; background:url(../img/action_buttons.png) 0 -50px;}

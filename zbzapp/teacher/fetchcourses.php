@@ -60,7 +60,7 @@
             <button class="button gray small">Create Test</button>
          </form>
       </li>
-      <li><a href="testmgr.php"> <button class="button gray small">Manage Tests</button></a></li>
+      <li><a href="testmgr.php?corID=<?php echo $rowcourse['courseid']; ?>"> <button class="button gray small">Manage Tests</button></a></li>
       <li>
          <form action="deletecourse.php" method="post" class="delete-course"><input type="hidden" name="courseid" value="<?php echo $rowcourse['courseid'] ?>" /><button class="button gray small" type="submit">Delete Course</button></form>
       </li>

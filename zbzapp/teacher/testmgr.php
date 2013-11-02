@@ -58,7 +58,8 @@
 		td:nth-of-type(3):before { content: "Test Name"; }
 		td:nth-of-type(4):before { content: "Test Description"; }
 		td:nth-of-type(5):before { content: "Test Duration"; }
-		td:nth-of-type(6):before { content: "Actions"; }
+		td:nth-of-type(6):before { content: "Total Questions"; }
+		td:nth-of-type(7):before { content: "Actions"; }
 	}
 	
 	/* Smartphones (portrait and landscape) ----------- */
@@ -107,6 +108,7 @@
 			<th>Test Name</th>
 			<th>Test Description</th>
 			<th>Test Duration</th>
+			<th>Total Questions</th>
 			<th>Actions</th>
 		</tr>
 		</thead>
@@ -121,13 +123,14 @@
 	<td><?php echo $rowtest['testname']; ?></td>
 	<td><?php echo $rowtest['testdescription']; ?></td>
 	<td><?php echo $rowtest['test_duration']; ?></td>
+	<td><?php echo $rowtest['total_questions']; ?></td>
 	<td><div class="action_holder"><a href="edit_test.php?testID=<?php echo $rowtest['testid']; ?>" title="Edit test"><div class="edit_action_button"></div></a><a title="Enroll Students" href="enrollAccept.php?testID=<?php echo $rowtest['testid']; ?>"><div class="enroll_action_button"></div></a><a title="Delete test" href="delete_test.php?testID=<?php echo $rowtest['testid']; ?>"><div class="delete_action_button"></div></a></div></td>
 	</tr>
 	<?php
 	}
    }
    else {
-	echo "Error fetching tests.";
+	echo "There are currently no tests under this course.";
    }
             ?>
          <br/>

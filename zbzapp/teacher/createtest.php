@@ -24,6 +24,8 @@
             <textarea row="2" columns="2" id="testdesc" placeholder="What is it about?" class="txtinput" name="testdesc"></textarea>
             <label>Test Duration</label>
             <input type="text" id="testduration" placeholder="The Time should only be in minutes." class="txtinput" name="testduration" />
+	    <label>Total Questions (Can be changed later)</label>
+	    <input type="text" id="totalQuestions" placeholder="How many questions will you add?" class="txtinput" name="totalQuestions" />
             <section id="buttons">	
                <input type="submit" id="submitbtn" class="submitbtn" name="createtest" value="Create" />
             </section>

@@ -13,16 +13,13 @@ This project is not ready yet. Kindly check back later.
 2. Chander Khaneja.
           
 
-This is also our Final Year major project for ITM University under Shilpa Mahajan <shilpa.kaushal@gmail.com> (Mentor).   
-
-
-<b>Expected Release Date</b> : 29th October 2013
+<b>Expected Release Date</b> : 29th April 2014
 
 
 LICENSE
 -------
 
-> Copyright 2013 Bhavyanshu Parasher (http://bhavyanshu.github.io) & Chander Khaneja.
+> Copyright 2013 Bhavyanshu Parasher (http://bhavyanshu.me) & Chander Khaneja.
 
 > Licensed under the Apache License, Version 2.0 (the "License"); you
 may not use this project except in compliance with the License. You 
@@ -40,8 +37,7 @@ CONTRIBUTION
 ------------
 
 *******************
-If interested, please help in normalizing the database 
-Go to http://ondras.zarovi.cz/sql/demo/ and import the dbSchema_under_consideration.xml file. Thanks a lot!
+Not accepting pull requests until first stable release.			
 *******************
 
 
@@ -50,4 +46,6 @@ SETUP
 
 1) Download and install xampp(windows)/lampp(linux)/mampp(Mac OS) to get php, mysql and apache server.  
 2) Move the zbzapp folder to the htdocs (Usually in C://windows/xampp) folder. (or /opt/lampp//htdocs in linux).    
-3) The folder "Setup Utils" contains the zbzapp_main.sql file so that you can import it via your phpmyadmin. (will be updated accordingly as the development progresses). 
+3) The folder "Setup Utils" contains the zbzapp_main.sql file so that you can import it via your phpmyadmin. (will be updated accordingly as the development progresses).				
+4) Provide your configuration settings in zbzapp/conf.ini file.
+

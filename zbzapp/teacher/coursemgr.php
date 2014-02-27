@@ -46,7 +46,7 @@
             <label>Course Description</label>
             <textarea row="2" columns="2" id="coursedesc1" class="txtinput" name="coursedesc"></textarea>
             <section id="buttons">		
-               <input type="submit" id="submitbtn" class="submitbtn" name="createcourse" value="Create" />
+            <input type="submit" id="submitbtn" class="submitbtn" name="createcourse" value="Create" />
             </section>
          </form>
          <br/>	

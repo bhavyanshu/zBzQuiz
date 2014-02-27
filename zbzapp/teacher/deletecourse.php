@@ -3,7 +3,7 @@ require_once('../config.php');
 $teacherID=$_SESSION['teacherid']; //uid in mysql DB.
  if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['uname']))
  {
-	if($_POST['courseid'])
+	if(isset($_POST['courseid']) && !empty($_POST['courseid']))
 	{
 		try{
 	$deletecourseSQL=$dbinfo->prepare("DELETE FROM teacher_course_status WHERE courseid=? AND uid=?");

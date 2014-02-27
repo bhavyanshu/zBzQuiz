@@ -18,15 +18,20 @@ function getpageTitle($titleset){
 	<title><?php echo getpageTitle($titleset); ?></title>
 			
             
-            <link rel="stylesheet" href="../css/inuit.css" />
-            <link rel="stylesheet" href="../css/fluid-grid16-1100px.css" />
-            <link rel="stylesheet" href="../css/eve-styles.css" />
-            <link rel="shortcut icon" href="../icon.png" />
-            <link rel="apple-touch-icon-precomposed" href="../img/icon.png" />
-            <link rel="stylesheet" href="../css/form-style.css">
+      <link rel="stylesheet" href="../css/inuit.css" />
+      <link rel="stylesheet" href="../css/fluid-grid16-1100px.css" />
+      <link rel="stylesheet" href="../css/eve-styles.css" />
+      <link rel="stylesheet" href="../css/buttons/buttons.css">
+      <link rel="shortcut icon" href="../icon.png" />
+      <link rel="apple-touch-icon-precomposed" href="../img/icon.png" />
+      <link rel="stylesheet" href="../css/form-style.css">
+      <link rel="stylesheet" href="../css/responsive-table-style.css">
+      <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/smoothness/jquery-ui.css" />
+      <link rel="stylesheet" href="../css/bootstrap-buttons.css">
   								<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
             <script src="../js/respond-min.js" type="text/javascript"></script>
             <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+            <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
             <script>window.jQuery || document.write('<script src="../scripts/jquery164min.js">\x3C/script>')</script><!--local fallback for JQuery-->
 			<script src="../js/jquery.flexslider-min.js" type="text/javascript"></script>
             <link rel="stylesheet" href="../css/flexslider.css" />

@@ -8,14 +8,14 @@
                 
                 			<div class="grids">
                                 <div class="grid-5 grid text-center">
-                                    <p>zBzQuiz Web Application v1.0 </p>
+                                    <p>zBzQuiz Web Application <?php echo $_Appversion; ?> </p>
                                 </div>
                                <div class="grid-6 grid text-center">
-                                    <p><a href="" title="copyleft">Developed by Bhavyanshu Parasher</a></p>
+                                    <p>Developed by <a href="" title="copyleft">Bhavyanshu Parasher</a> & Chander Khaneja</p>
                                 </div>
                                 
                                 <div class="grid-5 grid text-center">
-                                  <p>Contact Support<a href="mailto:bhavyanshu@codershangout.org" title="contact"> here</a></p>
+                                  <p><a href="mailto:bhavyanshu@codershangout.org" title="contact">Contact Support</a></p>
                                 </div>
                            </div><!--end of grids-->
                    </div><!--end of footer-->

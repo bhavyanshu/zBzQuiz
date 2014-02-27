@@ -29,8 +29,8 @@ $sqlsethash= $dbinfo->prepare("SELECT * FROM teacher_login_zbzxt WHERE uname =?"
 			{
 				foreach($result as $row)
 				{
-		   $email = $row['uemail']; 
-		   $uid = $row['uid'];
+		   		$email = $row['uemail']; 
+		   		$uid = $row['uid'];
 				$lastlogin = $row['ulogintime'];
 				$ustatus=1;
 				$ulogintime=date("d-m-Y H:i:s");   

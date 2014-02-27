@@ -64,6 +64,9 @@
       <li>
          <form action="deletecourse.php" method="post" class="delete-course"><input type="hidden" name="courseid" value="<?php echo $rowcourse['courseid'] ?>" /><button class="button gray small" type="submit">Delete Course</button></form>
       </li>
+      <li>
+        <form action="entrollstudents.php" method="post" class="enroll-students"><input type="hidden" name="courseid" value="<?php echo $rowcourse['courseid'] ?>" /><button class="button gray small" type="submit">Enroll Students</button></form>
+      </li>  
    </ul>
    <hr>
 </div>

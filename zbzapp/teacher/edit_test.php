@@ -5,29 +5,32 @@
    include('header.php');
    ?>
 <script type="text/javascript">
-$(document).ready(function (){
-	  $(".button_create_ques").click(function(){
-	    var form_data = $(this).closest("form").serialize();
-	    //alert(form_data);
-	    $.ajax({
-		url: "create_ques.php?testID=<?php echo $_GET['testID']; ?>",
-		type: 'GET',
-		data: form_data,
-		success: function() 
-			    {
-			    //alert("Question Initialized"); This is where we load the new question editing div
-				$('#displayProgress').hide()  // hide it initially
-    				.ajaxStart(function() {
-        				$(this).html("<img src='../img/ajax-loader.gif' title='Loading..' alt='Loading..' />").show();
-    					})
-				    .ajaxStop(function() {
-					$(this).hide();
-				    });
-				$("#displayQuestionDiv").load("fetch_question.php?"+form_data)	
-			    }
-		    });
-		    return false;
-		  });
+
+$(function(){
+$("#fetch_questions_list").load("fetch_questions_list.php?testID=<?php echo $_POST['testID']; ?>");	
+ //callback handler for form submit
+$(".test_edit").submit(function(event)
+{
+    var postData = $(this).serializeArray();
+    var formURL = $(this).attr("action");
+    $.ajax(
+    {
+        url : formURL,
+        type: "POST",
+        data : postData,
+        success:function(data, textStatus, jqXHR)
+        {
+            //alert("Server response:"+data);//data: return data from server
+            $("#fetch_questions_list").load("fetch_questions_list.php?testID=<?php echo $_POST['testID']; ?>");	
+        },
+        error: function(jqXHR, textStatus, errorThrown)
+        {
+            alert("There was an issue. Try again later.");    
+        }
+    });
+    event.preventDefault(); //STOP default action
+    event.unbind(); //unbind. to stop multiple form submit.
+});
 		});
 </script>
 <div class="wrapper">
@@ -40,34 +43,12 @@ $(document).ready(function (){
             ?>
       <div class="grid-6 grid grey">
          <h5>Questions List</h5>
-	 <?php
-	if(isset($_GET['testID']))
-	{
-		$fetchQInfo = $dbinfo->prepare("SELECT total_questions from course_test_status where testid=?");
-		$fetchQInfo -> execute(array($_GET['testID']));
-		$resultQInfo = $fetchQInfo->fetchALL();
-		if($resultQInfo){
-			foreach($resultQInfo as $Qinfo)
-			echo "<p><b>Total Questions:</b> ".$Qinfo['total_questions']."</p>";
-			$divCreator=1;
-			while($divCreator!=$Qinfo['total_questions']+1){
-			?>
-			<form id="form_create_ques" action="" method="get"><div class="grid-6 grid grey"><input id="quesid_form" name="quesID" type="hidden" value="<?php echo $divCreator;  ?>" /><input type="submit" class="button_create_ques" value="<?php echo $divCreator; ?>" /></div></form>
-			<?php
-			$divCreator+=1;
-			}
-		}
-		else{
-			echo "<p>There was an error fetching questions from database.Please contact administrator.</p>";
-		}	
-	}
-	else
-	{
-	echo "Invalide Test ID. Please contact administrator.";
-	}
-	?>
+	<!-- Questions list DIV dynamic loading-->
+	<div id="fetch_questions_list"></div>
 	</div>
-      <div class="grid-10">
+	<br/>
+     <div class="grid-10">
+     <br/>
          <h2>Test Manager</h3>
          <br/>	
 	<div id="displayProgress"></div>
@@ -76,40 +57,56 @@ $(document).ready(function (){
          <br/>
 	<h3>Test Information</h3>
          <?php
-	if(isset($_GET['testID']))
+	if(isset($_POST['testID']))
 	{
-		$fetchTestInfo = $dbinfo->prepare("SELECT * from course_test_status where testid=?");
-		$fetchTestInfo -> execute(array($_GET['testID']));
-		$resultTestInfo = $fetchTestInfo->fetchALL();
-		if($resultTestInfo){
-		echo "Test Information</br>";
-			foreach($resultTestInfo as $rowTestInfo)
-			{
-				//Output test related information
-			?>
-			<form name="test_edit" class="test_edit" id="hongkiat-form" method="post" action="test_edit.php?testID=<?php echo $rowTestInfo['testid']; ?>">
-            		<label>Test Name</label>
-            		<input type="text" id="testname" class="txtinput" placeholder="eg, java_test_1" name="testname" value="<?php echo $rowTestInfo['testname']; ?>" />
-	    		<label>Test Description</label>
-            		<textarea row="2" columns="2" id="testdesc" placeholder="What is it about?" class="txtinput" name="testdesc"><?php echo $rowTestInfo['testdescription']; ?></textarea>
-            		<label>Test Duration</label>
-            		<input type="text" id="testduration" value="<?php echo $rowTestInfo['test_duration']; ?>" placeholder="The Time should only be in minutes." class="txtinput" name="testduration" />
-	    		<label>Total Questions (Can be changed later)</label>
-	    		<input type="text" id="totalQuestions" value="<?php echo $rowTestInfo['total_questions']; ?>" placeholder="How many questions will you add?" class="txtinput" name="totalQuestions" />
-            		<section id="buttons">	
-               		<input type="submit" id="submitbtn" class="submitbtn" name="createtest" value="Update" />
-            		</section>
-         		</form>
-			<?php
-			}
-		}
-	}	
-	else
-	{
-	echo "Invalide Test ID. Please contact administrator.";
-	}
+    /*Check $_SESSION['teacherid'] is the owner of this test or not. If it is then pass, else show not authorized to edit this test.
+    SQL Query for it -> SELECT teacher_course_status.uid,course_test_status.testid
+    FROM teacher_course_status
+    LEFT JOIN course_test_status ON teacher_course_status.courseid = course_test_status.courseid
+    */
+    $checkAuthorized = $dbinfo->prepare("SELECT teacher_course_status.uid, teacher_course_status.coursename, course_test_status.testid FROM teacher_course_status LEFT JOIN course_test_status ON teacher_course_status.courseid = course_test_status.courseid WHERE course_test_status.testid=?");
+    $checkAuthorized->execute(array($_POST['testID']));
+    $resultcheckAuth = $checkAuthorized->fetchALL();
+    foreach ($resultcheckAuth as $checkAuthvalue) {
+      $teacher_check_ID=$checkAuthvalue['uid'];
+    }
+    if($teacher_check_ID==$_SESSION['teacherid']){
+    		$fetchTestInfo = $dbinfo->prepare("SELECT * from course_test_status where testid=?");
+    		$fetchTestInfo -> execute(array($_POST['testID']));
+    		$resultTestInfo = $fetchTestInfo->fetchALL();
+    		if($resultTestInfo) {
+    			foreach($resultTestInfo as $rowTestInfo)
+    			{
+    				//Output test related information
+    			?>
+    			<form name="test_edit" class="test_edit" id="hongkiat-form" method="post" action="test_edit_func.php">
+    				<input id="testid" name="testID" type="hidden" value="<?php echo $_POST['testID']; ?>" />
+                		<label>Test Name</label>
+                		<input type="text" id="testname" class="txtinput" placeholder="eg, java_test_1" name="testname" value="<?php echo $rowTestInfo['testname']; ?>" />
+    	    		<label>Test Description</label>
+                		<textarea row="2" columns="2" id="testdesc" placeholder="What is it about?" class="txtinput" name="testdesc"><?php echo $rowTestInfo['testdescription']; ?></textarea>
+                		<label>Test Duration</label>
+                		<input type="text" id="testduration" value="<?php echo $rowTestInfo['test_duration']; ?>" placeholder="The Time should only be in minutes." class="txtinput" name="testduration" />
+    	    		<label>Total Questions (Can be changed later)</label>
+    	    		<input type="text" id="totalQuestions" value="<?php echo $rowTestInfo['total_questions']; ?>" placeholder="How many questions will you add?" class="txtinput" name="totalQuestions" />
+                		<section id="buttons">	
+                   		<input type="submit" id="submitbtn" class="submitbtn" name="createtest" value="Update" />
+                		</section>
+             		</form>
+    			<?php
+    			}
+    		}
+    	}
+      else {
+        echo "You do not have the permission to edit this test.";
+      }
+    }	
+    	else
+    	{
+    	echo "Invalide Test ID. Please contact administrator.";
+    	}
         ?>
-         <br/>
+         <br/>         
 	<?php 
 }
 else
@@ -124,6 +121,7 @@ echo "<p><b>You are currently not logged in. You will have to <a href=\"index.ph
 </div>
 <!--end of wrapper-->
 <hr />
+
 <?php
    include('footer.php');
    ?>

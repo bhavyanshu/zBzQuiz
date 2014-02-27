@@ -222,3 +222,55 @@
 .edit_action_button {width:30px; height:40px; background:url(../img/action_buttons.png) -110px 0;}  
 .delete_action_button {width:30px; height:40px; background:url(../img/action_buttons.png) -115px -100px transparent;}
 .enroll_action_button {width:30px; height:40px; background:url(../img/action_buttons.png) 0 -50px;}
+
+/* Questions list */
+
+.button_create_ques {
+	margin-top: 10px;
+	margin-right: 10px;
+	padding: 1px 37px 1px 37px;
+	font-size: 14px;
+	line-height: 100%;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+	color: #fff;
+	display:inline-block;
+	vertical-align: middle;
+	text-align: center;
+	cursor: pointer;
+	font-weight: bold;
+	transition: background 0.1s ease-in-out;
+	-webkit-transition: background 0.1s ease-in-out;
+	-moz-transition: background 0.1s ease-in-out;
+	-ms-transition: background 0.1s ease-in-out;
+	-o-transition: background 0.1s ease-in-out;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	color: #fff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+.button_create_ques:active {
+	padding-top: 15px;
+        margin-bottom: -1px;
+	color:#000;
+	outline: 0 none;
+	text-decoration: none;
+}
+.button_create_ques, .button_create_ques:hover {
+	outline: 0 none;
+	text-decoration: none;
+	color: #fff;
+}
+
+.button_create_ques-1 {
+	background-color: #67b22d;
+	box-shadow: 0px 3px 0px 0px #67b22d;
+	margin:auto;
+}
+.button_create_ques-1:hover {
+	background-color: #4d8521;
+}
+.button_create_ques-1:active {
+	box-shadow: 0px 1px 0px 0px #3293ba;
+}

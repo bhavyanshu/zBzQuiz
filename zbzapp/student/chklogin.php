@@ -29,13 +29,15 @@ $sqlsethash= $dbinfo->prepare("SELECT * FROM student_login_zbzxs WHERE stuname =
 			{
 				foreach($result as $row)
 				{
-		   $email = $row['stuemail']; 
+				$stuid = $row['stuid'];	
+		   		$email = $row['stuemail']; 
 				$lastlogin = $row['stulogintime'];
 				$ustatus=1;
 				$ulogintime=date("d-m-Y H:i:s");   
 				$sql = $dbinfo-> prepare("UPDATE student_login_zbzxs SET stulogintime=?,stustatus=?");
 		 		$sql->execute(array($ulogintime,$ustatus));
 				}
+			$_SESSION['stuID'] = $stuid;	
 			$_SESSION['stuname'] = $username;
 			$_SESSION['stuemail'] = $email;
 			$_SESSION['stulastlogintime']=$lastlogin;

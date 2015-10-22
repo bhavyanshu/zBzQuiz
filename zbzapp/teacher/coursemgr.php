@@ -35,7 +35,7 @@
                	echo "<p>Username: <i><strong>".$_SESSION['uname']."</strong></i><br> User Email: <i><strong>".$_SESSION['uemail']."</strong></i><br> Last Session Time: <i><strong>".$_SESSION['ulastlogintime']."</strong></i></p>";
                	}    
             ?>
-         <p><a class="button" href="chklogout.php">Log out!</a></p>
+         <p><a class="btn btn-danger" href="chklogout.php">Log out!</a></p>
       </div>
       <div class="grid-10">
          <h3>Course Manager</h3>
@@ -46,7 +46,7 @@
             <label>Course Description</label>
             <textarea row="2" columns="2" id="coursedesc1" class="txtinput" name="coursedesc"></textarea>
             <section id="buttons">		
-            <input type="submit" id="submitbtn" class="submitbtn" name="createcourse" value="Create" />
+            <input type="submit" class="btn btn-primary" name="createcourse" value="Create" />
             </section>
          </form>
          <br/>	

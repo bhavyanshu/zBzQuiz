@@ -1,20 +1,15 @@
 zBzQuiz
 =======
 
-This project is not ready yet. Kindly check back later.
+Looking for maintainers as I don't have time to work on this anymore.
 
 <b>Status</b>: [![Build Status](https://travis-ci.org/bhavyanshu/zBzQuiz.png?branch=master)](https://travis-ci.org/bhavyanshu/zBzQuiz)                                 
-
-**Releases** :  No releases yet. Currently under development.                                    
+        
 
 ###List of contributors 
 
-1. Bhavyanshu Parasher (Email:bhavyanshu@codershangout.org || Website:http://bhavyanshu.github.io).
-2. Chander Khaneja.
-          
-
-<b>Expected Release Date</b> : 29th April 2014
-
+1. Bhavyanshu Parasher (Email:bhavyanshu@codershangout.org || Website:http://bhavyanshu.github.io)
+2. Chander Khaneja
 
 LICENSE
 -------

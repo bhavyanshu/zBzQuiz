@@ -15,7 +15,7 @@
                                 </div>
                                 
                                 <div class="grid-5 grid text-center">
-                                  <p>Contact Support<a href="contact.php" title="contact"> here</a></p>
+                                  <p><a href="contact.php" title="contact">Contact Support</a></p>
                                 </div>
                            </div><!--end of grids-->
                    </div><!--end of footer-->

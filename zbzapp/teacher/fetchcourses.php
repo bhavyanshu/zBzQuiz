@@ -56,16 +56,16 @@
    <div class="comment"><b>Course Description: </b><?php echo $rowcourse['coursedesc']; ?></div>
    <ul style="margin:0px;" id="navlist">
       <li>
-         <form style="width:115px;" name="hongkiat" id="hongkiat-form" method="post" action="createtest.php?corID=<?php echo $rowcourse['courseid']; ?>">
-            <button class="button gray small">Create Test</button>
+         <form name="hongkiat" id="hongkiat-form" method="post" action="createtest.php?corID=<?php echo $rowcourse['courseid']; ?>">
+            <button class="btn btn-default">Create Test</button>
          </form>
       </li>
-      <li><a href="testmgr.php?corID=<?php echo $rowcourse['courseid']; ?>"> <button class="button gray small">Manage Tests</button></a></li>
+      <li><a href="testmgr.php?corID=<?php echo $rowcourse['courseid']; ?>"> <button class="btn btn-default">Manage Tests</button></a></li>
       <li>
-         <form action="deletecourse.php" method="post" class="delete-course"><input type="hidden" name="courseid" value="<?php echo $rowcourse['courseid'] ?>" /><button class="button gray small" type="submit">Delete Course</button></form>
+         <form action="deletecourse.php" method="post" class="delete-course"><input type="hidden" name="courseid" value="<?php echo $rowcourse['courseid'] ?>" /><button class="btn btn-danger" type="submit">Delete Course</button></form>
       </li>
       <li>
-        <form action="entrollstudents.php" method="post" class="enroll-students"><input type="hidden" name="courseid" value="<?php echo $rowcourse['courseid'] ?>" /><button class="button gray small" type="submit">Enroll Students</button></form>
+        <form action="entrollstudents.php" method="post" class="enroll-students"><input type="hidden" name="courseid" value="<?php echo $rowcourse['courseid'] ?>" /><button class="btn btn-default" type="submit">Enroll Students</button></form>
       </li>  
    </ul>
    <hr>

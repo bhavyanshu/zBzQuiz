@@ -87,9 +87,9 @@ $(function() {
  		echo "<p>Username: <i><strong>".$_SESSION['stuname']."</strong></i><br> User Email: <i><strong>".$_SESSION['stuemail']."</strong></i><br> Last Session Time: <i><strong>".$_SESSION['stulastlogintime']."</strong></i></p>";
  	}    
  	?>
- 	<p><a class="button" href="chklogout.php">Log out!</a></p>
- 	<p><a href=""><button class="button green medium">Overall Performance</button></a></p>
- 	<p><a href=""><button class="button green medium">Submitted Tests  </button></a></p>
+ 	<p><a class="btn btn-danger" href="chklogout.php">Log out!</a></p>
+ 	<p><a href=""><button class="btn-full btn btn-primary">Overall Performance</button></a></p>
+ 	<p><a href=""><button class="btn-full btn btn-primary">Submitted Tests</button></a></p>
  </div>
  <div class="grid-10">
  	<h3>Search Course</h3>

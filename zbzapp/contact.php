@@ -8,7 +8,7 @@ include('header.php');
     		<div class="grids top">
 
                 <div class="grid-6 grid">
-                            <h2>Address</h2>
+                            <h2>Email Address</h2>
                              <div>   
                               <p class="bottom">
                                 Bhavyanshu Parasher<br />

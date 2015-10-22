@@ -1,6 +1,6 @@
  <script type="text/javascript">
 $(document).ready(function (){
-	  $(".button_create_ques").click(function(){
+	  $(".btn.btn-primary.btn-sm.btn-createques").click(function(){
 	    var form_data = $(this).closest("form").serialize();
 	    //alert(form_data);
 	    $.ajax({
@@ -42,7 +42,7 @@ $(document).ready(function (){
 			$divCreator=1;
 			while($divCreator!=$Qinfo['total_questions']+1){
 			?>
-			<form class="form_create_ques" action="" method="get"><div class="grid-6 grid grey"><input id="testid" name="testID" type="hidden" value="<?php echo $_GET['testID']; ?>" /><input id="quesid_form" name="quesID" type="hidden" value="<?php echo $divCreator;  ?>" /><input type="submit" class="button_create_ques button_create_ques-1" value="<?php echo "Q ".$divCreator; ?>" /></div></form>
+			<form class="form_create_ques" action="" method="get"><div class="grid-6 grid grey"><input id="testid" name="testID" type="hidden" value="<?php echo $_GET['testID']; ?>" /><input id="quesid_form" name="quesID" type="hidden" value="<?php echo $divCreator;  ?>" /><input type="submit" class="btn btn-primary btn-sm btn-createques" value="<?php echo "Q ".$divCreator; ?>" /></div></form>
 			<!-- <img class="delete_q" src="../img/delete_icon.png" width="50px" title="Delete Question" alt="Delete" /> -->
 			<?php
 			$divCreator+=1;

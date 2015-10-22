@@ -28,12 +28,17 @@ function getpageTitle($titleset){
       <link rel="stylesheet" href="../css/responsive-table-style.css">
       <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/smoothness/jquery-ui.css" />
       <link rel="stylesheet" href="../css/bootstrap-buttons.css">
+      <link rel="stylesheet" type="text/css" href="../jqplot/jquery.jqplot.min.css" />
   								<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
             <script src="../js/respond-min.js" type="text/javascript"></script>
             <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
             <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
             <script>window.jQuery || document.write('<script src="../scripts/jquery164min.js">\x3C/script>')</script><!--local fallback for JQuery-->
-			<script src="../js/jquery.flexslider-min.js" type="text/javascript"></script>
+			      <script src="../js/jquery.flexslider-min.js" type="text/javascript"></script>
+            <script language="javascript" type="text/javascript" src="../jqplot/jquery.jqplot.min.js"></script>
+            <script type="text/javascript" src="../jqplot/plugins/jqplot.barRenderer.min.js"></script>
+            <script type="text/javascript" src="../jqplot/plugins/jqplot.categoryAxisRenderer.min.js"></script>
+            <script type="text/javascript" src="../jqplot/plugins/jqplot.pointLabels.min.js"></script>
             <link rel="stylesheet" href="../css/flexslider.css" />
             
             <script type="text/javascript">

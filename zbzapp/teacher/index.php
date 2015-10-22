@@ -101,10 +101,10 @@
                	echo "<p>Username: <i><strong>".$_SESSION['uname']."</strong></i><br> User Email: <i><strong>".$_SESSION['uemail']."</strong></i><br> Last Session Time: <i><strong>".$_SESSION['ulastlogintime']."</strong></i></p>";
                }    
             ?>
-         <p><a class="button" href="chklogout.php">Log out!</a></p>
+         <p><a class="btn btn-danger" href="chklogout.php">Log out!</a></p>
          <h3>What would you like to do?</h3>
-         <p><a href="coursemgr.php"> <button class="button green medium">Manage Courses</button></a></p>
-         <p><a href="coursemgr.php"> <button class="button green medium">Analyze Test</button></a></p>
+         <p><a href="coursemgr.php"> <button class="btn-full btn btn-primary">Manage Courses</button></a></p>
+         <p><a href="coursemgr.php"> <button class="btn-full btn btn-primary">Analyze Test</button></a></p>
       </div>
       <div class="grid-10">
          <h3>Enrollment Requests</h3>
